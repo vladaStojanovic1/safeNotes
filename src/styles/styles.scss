@@ -18,6 +18,8 @@
 
 @import '../styles/variables';  
 @import '../styles/mixins';
+@import '../Components/Modal/modal';
+@import '../Components/MessageError/messageError';
 @import '../Components/Loader/loader';  
 @import '../Auth/Login/login';
 @import '../Auth/SignUp/signup';

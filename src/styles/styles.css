@@ -18,6 +18,48 @@
   font-size: 30px;
 }
 
+.my-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 400px;
+  z-index: 1500;
+  text-align: center;
+  border-radius: 10px;
+  background-image: radial-gradient(circle, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #f5f5f6, #ebebed, #e1e1e4, #cacbd1, #b4b6be, #9da2ab, #868e99);
+}
+
+@media (min-width: 320px) and (max-width: 550px) {
+  .my-modal {
+    width: 350px;
+  }
+}
+
+.error-message {
+  font-size: 12px;
+  color: #ff3d3d;
+  width: 70%;
+  margin: 0 auto;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.success-message {
+  font-size: 12px;
+  color: #279e03;
+  font-weight: bold;
+  width: 70%;
+  margin: 0 auto;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 .lds-ripple {
   display: inline-block;
   position: relative;

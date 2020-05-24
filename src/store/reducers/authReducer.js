@@ -11,6 +11,10 @@ const initialState = {
         error: null,
         loading: false
     },
+    deleteUser: {
+        error: null,
+        loading: false
+    }
 
 }
 
@@ -87,6 +91,24 @@ export default (state = initialState, { type, payload }) => {
                 ...state,
                 profileEdit: {
                     ...state.profileEdit,
+                    error: payload,
+                    loading: false
+                }
+            }
+        case actions.DELETE_USER_START:
+            return {
+                ...state,
+                deleteUser: {
+                    ...state.deleteUser,
+                    error: false,
+                    loading: true
+                }
+            }
+        case actions.DELETE_USER_FAIL:
+            return {
+                ...state,
+                deleteUser: {
+                    ...state.deleteUser,
                     error: payload,
                     loading: false
                 }

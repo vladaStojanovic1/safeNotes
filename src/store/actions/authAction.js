@@ -135,3 +135,32 @@ export const editProfile = (data, image) => async (dispatch, getState, { getFire
         dispatch({ type: actions.PROFILE_FAIL, payload: error.message })
     }
 }
+
+
+
+/*********** Delete Profile Action */
+export const deleteUserProfile = () => async (dispatch, getState, { getFirebase, getFirestore }) => {
+    const firebase = getFirebase();
+    const firestore = getFirestore();
+    const user = firebase.auth().currentUser;
+    const userId = getState().firebase.auth.uid;
+
+    dispatch({ type: actions.DELETE_USER_START });
+
+    try {
+        await firestore
+            .collection('users')
+            .doc(userId)
+            .delete()
+
+        await firestore
+            .collection('notes')
+            .doc(userId)
+            .delete()
+
+        await user.delete();
+
+    } catch (error) {
+        dispatch({ type: actions.DELETE_USER_FAIL, payload: error.message });
+    }
+}

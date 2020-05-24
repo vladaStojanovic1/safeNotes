@@ -1,0 +1,8 @@
+.my-modal{
+    @include myModal();
+}
+@media (min-width: 320px) and (max-width: 550px){
+    .my-modal{
+        width: 350px;
+    }
+}

@@ -6,9 +6,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { ProfileSchema } from '../ValidationSchemas/';
 import { FormError } from '../../Components/FormError/FormError';
 import { editProfile } from '../../store/actions/authAction';
+import { Modal } from '../../Components/Modal/Modal';
+import { deleteUserProfile } from '../../store/actions/authAction';
 import { MessageError } from '../../Components/MessageError/MessageError';
 import profilePlaceholder from '../../images/profile.jpg';
 import { EditProfileLoader } from '../../Components/Loader/EditProfileLoader';
+import { DeleteLoader } from '../../Components/Loader/DeleteLoader';
 
 export const UserProfile = () => {
 
@@ -24,6 +27,10 @@ export const UserProfile = () => {
     const errorEdit = useSelector(state => state.auth.profileEdit.error);
     const userName = useSelector(state => state.firebase.profile.firstName);
 
+    // Delete Profile
+    const deleteUserAction = useCallback(() => dispatch(deleteUserProfile()));
+    const loadingDelete = useSelector(state => state.auth.deleteUser.loading);
+    const errorDelete = useSelector(state => state.auth.deleteUser.error);
 
     const [modalOpened, setModalOpened] = useState(false);
 
@@ -140,7 +147,7 @@ export const UserProfile = () => {
                                 <button
                                     type='button'
                                     className='delete-btn'
-                                >
+                                    onClick={() => setModalOpened(true)}>
                                     Delete account &nbsp; <i className="fas fa-trash "></i>
                                 </button>
                             </div>
@@ -149,6 +156,33 @@ export const UserProfile = () => {
                 </Formik>
 
 
+                {/* Modal */}
+                <Modal
+                    close={() => setModalOpened(false)}
+                    opened={modalOpened}
+                >
+                    <h2 className='delete-title'>Delete your account</h2>
+                    <p className='delete-text'><span className='username-modal'>{userName}</span> do you really want to delete your account?</p>
+
+                    {loadingDelete ? <DeleteLoader /> :
+                        <div className='delete-btn-div'>
+                            <button
+                                onClick={deleteUserAction}
+                                type='button'
+                                loading={loadingDelete ? 'Deleting...' : null}
+                                className='delete-btn modal-delete'>
+                                Delete account &nbsp; <i class="fas fa-trash"></i>
+                            </button>
+
+                            <button
+                                type='button'
+                                className='cancel-btn'
+                                onClick={() => setModalOpened(false)}>
+                                Cancel
+                        </button>
+                            <MessageError error={errorDelete} />
+                        </div>}
+                </Modal>
 
             </div>
         </div>
