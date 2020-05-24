@@ -19,3 +19,8 @@ export const CLEAN_UP = 'CLEAN_UP';
 export const ADD_NOTE_START = 'ADD_NOTE_START';
 export const ADD_NOTE_SUCCESS = 'ADD_NOTE_SUCCESS';
 export const ADD_NOTE_FAIL = 'ADD_NOTE_FAIL';
+
+
+export const DELETE_NOTE_START = 'DELETE_NOTE_START';
+export const DELETE_NOTE_SUCCESS = 'DELETE_NOTE_SUCCESS';
+export const DELETE_NOTE_FAIL = 'DELETE_NOTE_FAIL';

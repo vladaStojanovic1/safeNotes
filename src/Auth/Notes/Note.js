@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import pin from '../../images/pin.png';
 import moment from 'moment';
+import { DeleteNote } from './DeleteNote';
 
 export const Note = ({ note }) => {
 
@@ -20,7 +21,10 @@ export const Note = ({ note }) => {
                 <i onClick={() => setModalOpened(true)} class="fas fa-trash-alt hvr-grow-rotate"></i>
             </div>
 
-
+            <DeleteNote
+                id={note.id}
+                close={() => setModalOpened(false)}
+                opened={modalOpened} />
         </>
     )
 }

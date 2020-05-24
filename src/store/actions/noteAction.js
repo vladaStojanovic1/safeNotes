@@ -46,3 +46,33 @@ export const addNote = (data) => async (dispatch, getState, { getFirebase, getFi
         dispatch({ type: actions.ADD_NOTE_FAIL, payload: error.message });
     }
 }
+
+
+
+/******** Delete Note */
+export const deleteNote = id => async (dispatch, getState, { getFirestore }) => {
+    const firestore = getFirestore();
+    const userId = getState().firebase.auth.uid;
+
+    dispatch({ type: actions.DELETE_NOTE_START });
+    try {
+        const res = await firestore
+            .collection('notes')
+            .doc(userId)
+            .get();
+
+        const previousTodo = res.data().notes;
+        // filter old notes and return new arr
+        const newNotes = previousTodo.filter(note => note.id !== id);
+
+        await firestore
+            .collection('notes')
+            .doc(userId)
+            .update({
+                notes: newNotes
+            })
+        dispatch({ type: actions.DELETE_NOTE_SUCCESS });
+    } catch (error) {
+        dispatch({ type: actions.DELETE_NOTE_FAIL, payload: error.message });
+    }
+}
