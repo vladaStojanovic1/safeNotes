@@ -1,0 +1,36 @@
+.verify-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 58px);
+}
+.verify-container{
+    width: 500px;
+    height: 200px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .text-verify{
+        line-height: 25px;
+    }
+    button{
+        @include myBtn();
+        @include btnEffect();
+        margin: 0 auto;
+        width: 70%;
+        font-size: 17px;
+        background-image: linear-gradient(to right top, #d5ba3b, #d3ba35, #d2ba2f, #d0bb28, #cebb20, #d2bf2c, #d5c437, #d9c840, #e3d158, #edda6e, #f6e484, #ffed99);
+    }
+    p{
+        margin-bottom: 20px;
+        .user-info{
+            text-transform: capitalize;
+            color: #e91e63;
+        }
+        .user-info-email{
+            text-transform: lowercase;
+            color: #e91e63;
+        }
+    }
+}

@@ -63,3 +63,17 @@ export const login = (data) => async (dispatch, getState, { getFirebase }) => {
     }
 }
 
+
+/******** Verify Email Action */
+export const verifyEmail = () => async (dispatch, getState, { getFirebase }) => {
+
+    const firebase = getFirebase();
+    dispatch({ type: actions.VERIFY_START });
+    try {
+        const user = firebase.auth().currentUser;
+        await user.sendEmailVerification();
+        dispatch({ type: actions.VERIFY_SUCCESS });
+    } catch (error) {
+        dispatch({ type: actions.VERIFY_FAIL, payload: error.message });
+    }
+}

@@ -7,6 +7,7 @@ import { Login } from '../Auth/Login/Login';
 import { SignUp } from '../Auth/SignUp/SignUp';
 import { Navbar } from '../Components/Navbar/Navbar';
 import { Logout } from '../Auth/Logout/Logout';
+import { VerifyEmail } from '../Auth/VerifyEmail/VerifyEmail';
 
 
 
@@ -20,6 +21,7 @@ export const Routes = () => {
     if (loggedIn && !emailVerified) {
         routes = (
             <Switch>
+                <Route exact path='/' component={VerifyEmail} />
                 <Route path='/navbar' component={Navbar} />
                 <Route path='/logout' component={Logout} />
                 <Redirect to='/' />
@@ -31,7 +33,6 @@ export const Routes = () => {
         routes = (
             <Switch>
                 <Route path='/logout' component={Logout} />
-
             </Switch>
         )
 

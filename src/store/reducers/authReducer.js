@@ -3,6 +3,10 @@ import * as actions from '../types'
 const initialState = {
     error: null,
     loading: false,
+    verifyEmail: {
+        error: null,
+        loading: false
+    },
 
 }
 
@@ -30,6 +34,34 @@ export default (state = initialState, { type, payload }) => {
                 ...state,
                 loading: false
             }
+        case actions.VERIFY_START:
+            return {
+                ...state,
+                verifyEmail: {
+                    ...state.verifyEmail,
+                    loading: true
+                }
+
+            }
+        case actions.VERIFY_SUCCESS:
+            return {
+                ...state,
+                verifyEmail: {
+                    ...state.verifyEmail,
+                    error: false,
+                    loading: false
+                }
+            }
+        case actions.VERIFY_FAIL:
+            return {
+                ...state,
+                verifyEmail: {
+                    ...state.verifyEmail,
+                    error: payload,
+                    loading: false
+                }
+            }
+
 
 
         default:

@@ -1337,4 +1337,78 @@
   -webkit-transform: scale(1.1) rotate(4deg);
   transform: scale(1.1) rotate(4deg);
 }
+
+.verify-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: calc(100vh - 58px);
+}
+
+.verify-container {
+  width: 500px;
+  height: 200px;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.verify-container .text-verify {
+  line-height: 25px;
+}
+
+.verify-container button {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#ff67c4), color-stop(#ff68b3), color-stop(#ff6aa4), color-stop(#ff6f96), color-stop(#ff748a), color-stop(#ff817f), color-stop(#ff8e77), color-stop(#ff9c72), color-stop(#ffb572), color-stop(#ffce79), color-stop(#fbe788), to(#f2ff9f));
+  background-image: linear-gradient(to right top, #ff67c4, #ff68b3, #ff6aa4, #ff6f96, #ff748a, #ff817f, #ff8e77, #ff9c72, #ffb572, #ffce79, #fbe788, #f2ff9f);
+  width: 80%;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin: 0 auto;
+  width: 70%;
+  font-size: 17px;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#d5ba3b), color-stop(#d3ba35), color-stop(#d2ba2f), color-stop(#d0bb28), color-stop(#cebb20), color-stop(#d2bf2c), color-stop(#d5c437), color-stop(#d9c840), color-stop(#e3d158), color-stop(#edda6e), color-stop(#f6e484), to(#ffed99));
+  background-image: linear-gradient(to right top, #d5ba3b, #d3ba35, #d2ba2f, #d0bb28, #cebb20, #d2bf2c, #d5c437, #d9c840, #e3d158, #edda6e, #f6e484, #ffed99);
+}
+
+.verify-container button:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.verify-container button:active {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.verify-container p {
+  margin-bottom: 20px;
+}
+
+.verify-container p .user-info {
+  text-transform: capitalize;
+  color: #e91e63;
+}
+
+.verify-container p .user-info-email {
+  text-transform: lowercase;
+  color: #e91e63;
+}
 /*# sourceMappingURL=styles.css.map */
