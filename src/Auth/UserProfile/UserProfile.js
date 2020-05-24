@@ -12,6 +12,7 @@ import { MessageError } from '../../Components/MessageError/MessageError';
 import profilePlaceholder from '../../images/profile.jpg';
 import { EditProfileLoader } from '../../Components/Loader/EditProfileLoader';
 import { DeleteLoader } from '../../Components/Loader/DeleteLoader';
+import { cleanMessage } from '../../store/actions/authAction';
 
 export const UserProfile = () => {
 
@@ -31,9 +32,16 @@ export const UserProfile = () => {
     const deleteUserAction = useCallback(() => dispatch(deleteUserProfile()));
     const loadingDelete = useSelector(state => state.auth.deleteUser.loading);
     const errorDelete = useSelector(state => state.auth.deleteUser.error);
+    const cleanMessageAction = useCallback(() => dispatch(cleanMessage()));
 
     const [modalOpened, setModalOpened] = useState(false);
 
+
+    useEffect(() => {
+        return () => {
+            cleanMessageAction()
+        }
+    }, [])
 
     if (!firebase.profile.isLoaded) return null;
 

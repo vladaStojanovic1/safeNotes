@@ -9,6 +9,8 @@ import { FormError } from '../../Components/FormError/FormError';
 import { LoginSchema } from '../ValidationSchemas';
 import { MessageError } from '../../Components/MessageError/MessageError';
 import { LoginLoader } from '../../Components/Loader/LoginLoader';
+import { cleanMessage } from '../../store/actions/authAction';
+
 
 export const Login = () => {
 
@@ -16,9 +18,14 @@ export const Login = () => {
     const loginAction = useCallback((data) => dispatch(actions.login(data)));
     const error = useSelector(state => state.auth.error);
     const loading = useSelector(state => state.auth.loading);
+    const cleanMessageAction = useCallback(() => dispatch(cleanMessage()))
 
 
-
+    useEffect(() => {
+        return () => {
+            cleanMessageAction()
+        }
+    }, [])
 
 
     return (

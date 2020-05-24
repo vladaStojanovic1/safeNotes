@@ -16,6 +16,14 @@ export const SignUp = () => {
     const signUpAction = useCallback((data) => dispatch(actions.signUp(data)));
     const error = useSelector(state => state.auth.error);
     const loading = useSelector(state => state.auth.loading);
+    const cleanMessageAction = useCallback(() => dispatch(actions.cleanMessage()))
+
+
+    useEffect(() => {
+        return () => {
+            cleanMessageAction()
+        }
+    }, [])
 
 
     return (

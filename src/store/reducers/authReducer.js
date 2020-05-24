@@ -113,7 +113,27 @@ export default (state = initialState, { type, payload }) => {
                     loading: false
                 }
             }
-
+        case actions.CLEAN_UP:
+            return {
+                ...state,
+                error: null,
+                loading: false,
+                verifyEmail: {
+                    ...state.verifyEmail,
+                    error: null,
+                    loading: false
+                },
+                profileEdit: {
+                    ...state.profileEdit,
+                    error: null,
+                    loading: false
+                },
+                deleteUser: {
+                    ...state.deleteUser,
+                    error: null,
+                    loading: false
+                },
+            }
 
         default:
             return state;

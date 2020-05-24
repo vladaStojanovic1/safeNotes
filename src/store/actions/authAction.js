@@ -164,3 +164,10 @@ export const deleteUserProfile = () => async (dispatch, getState, { getFirebase,
         dispatch({ type: actions.DELETE_USER_FAIL, payload: error.message });
     }
 }
+
+
+
+/********** Clean message */
+export const cleanMessage = () => {
+    return { type: actions.CLEAN_UP }
+}

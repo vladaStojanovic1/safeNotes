@@ -13,3 +13,5 @@ export const PROFILE_FAIL = 'PROFILE_FAIL';
 
 export const DELETE_USER_START = 'DELETE_USER_START';
 export const DELETE_USER_FAIL = 'DELETE_USER_FAIL';
+
+export const CLEAN_UP = 'CLEAN_UP';
