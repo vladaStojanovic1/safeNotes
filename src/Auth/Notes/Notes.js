@@ -10,6 +10,7 @@ import { FormError } from '../../Components/FormError/FormError';
 import noteModal from '../../images/note-modal2.png';
 import { addNote } from '../../store/actions/noteAction';
 import { MessageError } from '../../Components/MessageError/MessageError';
+import DisplayNotes from './DisplayNotes';
 
 export const Notes = () => {
 
@@ -107,7 +108,7 @@ export const Notes = () => {
                 <MessageError error={error} />
             </Modal>
 
-
+            <DisplayNotes />
         </div>
     )
 }
