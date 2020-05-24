@@ -5,6 +5,8 @@ import { useSelector } from 'react-redux';
 /****** Components */
 import { Login } from '../Auth/Login/Login';
 import { SignUp } from '../Auth/SignUp/SignUp';
+import { Navbar } from '../Components/Navbar/Navbar';
+import { Logout } from '../Auth/Logout/Logout';
 
 
 
@@ -18,6 +20,8 @@ export const Routes = () => {
     if (loggedIn && !emailVerified) {
         routes = (
             <Switch>
+                <Route path='/navbar' component={Navbar} />
+                <Route path='/logout' component={Logout} />
                 <Redirect to='/' />
             </Switch>
         )
@@ -26,6 +30,7 @@ export const Routes = () => {
     } else if (loggedIn && emailVerified) {
         routes = (
             <Switch>
+                <Route path='/logout' component={Logout} />
 
             </Switch>
         )
@@ -42,7 +47,7 @@ export const Routes = () => {
 
     return (
         <div className={loggedIn ? 'loggedIn-content' : null}>
-
+            {loggedIn ? <Navbar /> : null}
             {routes}
         </div>
     )
