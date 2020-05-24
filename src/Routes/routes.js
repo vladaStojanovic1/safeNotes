@@ -8,6 +8,7 @@ import { SignUp } from '../Auth/SignUp/SignUp';
 import { Navbar } from '../Components/Navbar/Navbar';
 import { Logout } from '../Auth/Logout/Logout';
 import { VerifyEmail } from '../Auth/VerifyEmail/VerifyEmail';
+import { UserProfile } from '../Auth/UserProfile/UserProfile';
 
 
 
@@ -24,6 +25,7 @@ export const Routes = () => {
                 <Route exact path='/' component={VerifyEmail} />
                 <Route path='/navbar' component={Navbar} />
                 <Route path='/logout' component={Logout} />
+                <Route path='/profile' component={UserProfile} />
                 <Redirect to='/' />
             </Switch>
         )

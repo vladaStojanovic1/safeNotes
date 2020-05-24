@@ -31,3 +31,26 @@ export const LoginSchema = Yup.object().shape({
         .min(8, 'To short..')
 })
 
+
+export const ProfileSchema = Yup.object().shape({
+    firstName: Yup.string()
+        .required('Your name is required.')
+        .min(3, 'To short')
+        .max(25, 'To long.'),
+    lastName: Yup.string()
+        .required('Your last name is required.')
+        .min(3, 'To short')
+        .max(25, 'To long.'),
+    email: Yup.string()
+        .email('Invalid email')
+        .required('The email is required'),
+    password: Yup.string()
+        .min(8, 'The password is to short'),
+    confirmPassword: Yup.string()
+        .when("password", {
+            is: val => val && val.length > 0,
+            then: Yup.string()
+                .oneOf([Yup.ref("password")], "Both passwords need to be the same")
+                .required()
+        }),
+})

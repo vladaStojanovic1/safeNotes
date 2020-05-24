@@ -1,0 +1,162 @@
+.profile-container{
+    width: 400px;
+    height: 600px;
+    background-image: radial-gradient(circle, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #f5f5f6, #ebebed, #e1e1e4, #cacbd1, #b4b6be, #9da2ab, #868e99);
+    opacity: 0.9;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    border-radius: 40px;
+}
+
+.fileUpload {
+    background: #377df9;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	color: #fff;
+	font-weight: bold;
+	margin: 5px auto;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+    font-size: 11px;
+    padding: 8px;
+    width: 35px;
+    height: 35;
+    border-radius: 50%;
+   cursor: pointer;
+   position: absolute;
+   left: 53%;
+   bottom: -8px;
+
+   .fa-camera{
+       font-size: 19px;
+   }
+}
+.image-title{
+    position: relative;
+}
+.fileUpload:hover, .fileUpload:active, .fileUpload:focus {
+  cursor: pointer;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    width: 148px;
+    height: 46px;
+  cursor: pointer;
+}
+
+input[type="file"] {
+    position: fixed;
+    right: 100%;
+    bottom: 100%;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.title-edit{
+    text-align: center;
+    display: grid;
+    grid-row-gap: 16px;
+    p{
+        color: $silver-light;
+        font-weight: bold;
+    }
+    .fa-user-edit{
+        color: $silver-light;
+        font-size: 25px;
+    }
+}
+.image-upload{
+    text-align: center;
+}
+.profile-image{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+}
+
+.delete-btn{
+    cursor: pointer;
+    @include btnEffect();
+    border-radius: 30px;
+    border: none;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    font-weight: bold;
+    outline: none;
+    background-image: linear-gradient(to left top, #d16ba5, #d86f9f, #de7399, #e27894, #e57e8f, #e77b8c, #ea7788, #ec7485, #ef6684, #f15685, #f24487, #f22c8b);
+    
+    &:hover{
+        background-image: linear-gradient(to left top, #ff0091, #ff007b, #ff0065, #ff004e, #ff0037, #ff0037, #ff0037, #ff0037, #ff004e, #fe0064, #fa1978, #f22c8b);
+    }
+}
+
+.edit-btn{
+    @include myBtn(); 
+    @include btnEffect();
+    font-weight: bold;
+    background-image: linear-gradient(to left top, #99edff, #68daff, #2fc5ff, #00aeff, #0094ff, #0086fc, #0077f8, #1068f2, #0c65ef, #0861ed, #045eea, #005ae7);
+}
+
+.cancel-btn{
+    @include myBtn(); 
+    @include btnEffect();
+    background-image: linear-gradient(to left top, #99edff, #68daff, #2fc5ff, #00aeff, #0094ff, #0086fc, #0077f8, #1068f2, #0c65ef, #0861ed, #045eea, #005ae7);
+    width: 30%;
+    padding: 5px;
+}
+
+.delete-text{
+    margin-bottom: 65px;
+    font-size: 14px;
+    padding: 0 23px 0 23px;
+}
+
+.delete-title{
+    margin-bottom: 21px;
+    padding-top: 20px;
+}
+.modal-delete{
+    margin-right: 38px;
+}
+.username-modal{
+    font-weight: bold;
+}
+
+.delete-btn-div{
+    margin-bottom: 25px;
+}
+
+@media (min-width: 320px) and (max-width: 550px){
+    .profile-container{
+        width: 90%;
+    }
+    .title-edit{
+        p{
+            font-size: 14px;
+        }
+    }
+    .edit-btn{
+        font-size: 12px;
+    width: 60%;
+    }
+    .delete-btn{
+        font-size: 11px;
+    }
+}

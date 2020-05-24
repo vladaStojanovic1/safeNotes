@@ -7,6 +7,10 @@ const initialState = {
         error: null,
         loading: false
     },
+    profileEdit: {
+        error: null,
+        loading: false
+    },
 
 }
 
@@ -61,7 +65,32 @@ export default (state = initialState, { type, payload }) => {
                     loading: false
                 }
             }
-
+        case actions.PROFILE_START:
+            return {
+                ...state,
+                profileEdit: {
+                    ...state.profileEdit,
+                    loading: true
+                }
+            }
+        case actions.PROFILE_SUCCESS:
+            return {
+                ...state,
+                profileEdit: {
+                    ...state.profileEdit,
+                    error: false,
+                    loading: false
+                }
+            }
+        case actions.PROFILE_FAIL:
+            return {
+                ...state,
+                profileEdit: {
+                    ...state.profileEdit,
+                    error: payload,
+                    loading: false
+                }
+            }
 
 
         default:

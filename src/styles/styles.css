@@ -1411,4 +1411,236 @@
   text-transform: lowercase;
   color: #e91e63;
 }
+
+.profile-container {
+  width: 400px;
+  height: 600px;
+  background-image: radial-gradient(circle, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #f5f5f6, #ebebed, #e1e1e4, #cacbd1, #b4b6be, #9da2ab, #868e99);
+  opacity: 0.9;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 50px;
+  border-radius: 40px;
+}
+
+.fileUpload {
+  background: #377df9;
+  border-radius: 15px;
+  color: #fff;
+  font-weight: bold;
+  margin: 5px auto;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  font-size: 11px;
+  padding: 8px;
+  width: 35px;
+  height: 35;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  left: 53%;
+  bottom: -8px;
+}
+
+.fileUpload .fa-camera {
+  font-size: 19px;
+}
+
+.image-title {
+  position: relative;
+}
+
+.fileUpload:hover, .fileUpload:active, .fileUpload:focus {
+  cursor: pointer;
+}
+
+.fileUpload input.upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  width: 148px;
+  height: 46px;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  position: fixed;
+  right: 100%;
+  bottom: 100%;
+}
+
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.title-edit {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 16px;
+}
+
+.title-edit p {
+  color: #757474;
+  font-weight: bold;
+}
+
+.title-edit .fa-user-edit {
+  color: #757474;
+  font-size: 25px;
+}
+
+.image-upload {
+  text-align: center;
+}
+
+.profile-image {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+
+.delete-btn {
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  font-weight: bold;
+  outline: none;
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#d16ba5), color-stop(#d86f9f), color-stop(#de7399), color-stop(#e27894), color-stop(#e57e8f), color-stop(#e77b8c), color-stop(#ea7788), color-stop(#ec7485), color-stop(#ef6684), color-stop(#f15685), color-stop(#f24487), to(#f22c8b));
+  background-image: linear-gradient(to left top, #d16ba5, #d86f9f, #de7399, #e27894, #e57e8f, #e77b8c, #ea7788, #ec7485, #ef6684, #f15685, #f24487, #f22c8b);
+}
+
+.delete-btn:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.delete-btn:active {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.delete-btn:hover {
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#ff0091), color-stop(#ff007b), color-stop(#ff0065), color-stop(#ff004e), color-stop(#ff0037), color-stop(#ff0037), color-stop(#ff0037), color-stop(#ff0037), color-stop(#ff004e), color-stop(#fe0064), color-stop(#fa1978), to(#f22c8b));
+  background-image: linear-gradient(to left top, #ff0091, #ff007b, #ff0065, #ff004e, #ff0037, #ff0037, #ff0037, #ff0037, #ff004e, #fe0064, #fa1978, #f22c8b);
+}
+
+.edit-btn {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#ff67c4), color-stop(#ff68b3), color-stop(#ff6aa4), color-stop(#ff6f96), color-stop(#ff748a), color-stop(#ff817f), color-stop(#ff8e77), color-stop(#ff9c72), color-stop(#ffb572), color-stop(#ffce79), color-stop(#fbe788), to(#f2ff9f));
+  background-image: linear-gradient(to right top, #ff67c4, #ff68b3, #ff6aa4, #ff6f96, #ff748a, #ff817f, #ff8e77, #ff9c72, #ffb572, #ffce79, #fbe788, #f2ff9f);
+  width: 80%;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-weight: bold;
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#99edff), color-stop(#68daff), color-stop(#2fc5ff), color-stop(#00aeff), color-stop(#0094ff), color-stop(#0086fc), color-stop(#0077f8), color-stop(#1068f2), color-stop(#0c65ef), color-stop(#0861ed), color-stop(#045eea), to(#005ae7));
+  background-image: linear-gradient(to left top, #99edff, #68daff, #2fc5ff, #00aeff, #0094ff, #0086fc, #0077f8, #1068f2, #0c65ef, #0861ed, #045eea, #005ae7);
+}
+
+.edit-btn:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.edit-btn:active {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.cancel-btn {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#ff67c4), color-stop(#ff68b3), color-stop(#ff6aa4), color-stop(#ff6f96), color-stop(#ff748a), color-stop(#ff817f), color-stop(#ff8e77), color-stop(#ff9c72), color-stop(#ffb572), color-stop(#ffce79), color-stop(#fbe788), to(#f2ff9f));
+  background-image: linear-gradient(to right top, #ff67c4, #ff68b3, #ff6aa4, #ff6f96, #ff748a, #ff817f, #ff8e77, #ff9c72, #ffb572, #ffce79, #fbe788, #f2ff9f);
+  width: 80%;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#99edff), color-stop(#68daff), color-stop(#2fc5ff), color-stop(#00aeff), color-stop(#0094ff), color-stop(#0086fc), color-stop(#0077f8), color-stop(#1068f2), color-stop(#0c65ef), color-stop(#0861ed), color-stop(#045eea), to(#005ae7));
+  background-image: linear-gradient(to left top, #99edff, #68daff, #2fc5ff, #00aeff, #0094ff, #0086fc, #0077f8, #1068f2, #0c65ef, #0861ed, #045eea, #005ae7);
+  width: 30%;
+  padding: 5px;
+}
+
+.cancel-btn:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.cancel-btn:active {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.delete-text {
+  margin-bottom: 65px;
+  font-size: 14px;
+  padding: 0 23px 0 23px;
+}
+
+.delete-title {
+  margin-bottom: 21px;
+  padding-top: 20px;
+}
+
+.modal-delete {
+  margin-right: 38px;
+}
+
+.username-modal {
+  font-weight: bold;
+}
+
+.delete-btn-div {
+  margin-bottom: 25px;
+}
+
+@media (min-width: 320px) and (max-width: 550px) {
+  .profile-container {
+    width: 90%;
+  }
+  .title-edit p {
+    font-size: 14px;
+  }
+  .edit-btn {
+    font-size: 12px;
+    width: 60%;
+  }
+  .delete-btn {
+    font-size: 11px;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
