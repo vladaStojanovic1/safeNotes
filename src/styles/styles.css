@@ -1455,6 +1455,24 @@
   color: #e91e63;
 }
 
+@media (min-width: 320px) and (max-width: 550px) {
+  .text-verify {
+    color: white;
+    font-size: 13px;
+  }
+  .verify-content {
+    margin-top: 100px;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+  }
+  .verify-container button {
+    font-size: 12px;
+    width: 55%;
+    outline: none;
+  }
+}
+
 .profile-container {
   width: 400px;
   height: 600px;
