@@ -9,6 +9,7 @@ import { Navbar } from '../Components/Navbar/Navbar';
 import { Logout } from '../Auth/Logout/Logout';
 import { VerifyEmail } from '../Auth/VerifyEmail/VerifyEmail';
 import { UserProfile } from '../Auth/UserProfile/UserProfile';
+import { Notes } from '../Auth/Notes/Notes';
 
 
 
@@ -34,7 +35,10 @@ export const Routes = () => {
     } else if (loggedIn && emailVerified) {
         routes = (
             <Switch>
+                <Route exact path='/' component={Notes} />
                 <Route path='/logout' component={Logout} />
+                <Route exact path='/profile' component={UserProfile} />
+
             </Switch>
         )
 

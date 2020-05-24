@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -1684,5 +1685,395 @@ input[type="file"] {
   .delete-btn {
     font-size: 11px;
   }
+}
+
+.notes-title {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  margin-top: 40px;
+  color: #dfdfdf;
+}
+
+.notes-title div:nth-child(1) {
+  text-align: center;
+}
+
+.notes-title div:nth-child(1) p {
+  font-size: 12px;
+}
+
+.notes-title .add-note-btn {
+  margin-top: 40px;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#ff67c4), color-stop(#ff68b3), color-stop(#ff6aa4), color-stop(#ff6f96), color-stop(#ff748a), color-stop(#ff817f), color-stop(#ff8e77), color-stop(#ff9c72), color-stop(#ffb572), color-stop(#ffce79), color-stop(#fbe788), to(#f2ff9f));
+  background-image: linear-gradient(to right top, #ff67c4, #ff68b3, #ff6aa4, #ff6f96, #ff748a, #ff817f, #ff8e77, #ff9c72, #ffb572, #ffce79, #fbe788, #f2ff9f);
+  width: 80%;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  padding: 7px 20px 7px 20px;
+  font-size: 16px;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#ff866d), color-stop(#fb8772), color-stop(#f78977), color-stop(#f38a7c), color-stop(#ee8c80), color-stop(#ee897f), color-stop(#ed877d), color-stop(#ed847c), color-stop(#f17c75), color-stop(#f5736d), color-stop(#f86966), to(#fb5f5f));
+  background-image: linear-gradient(to right top, #ff866d, #fb8772, #f78977, #f38a7c, #ee8c80, #ee897f, #ed877d, #ed847c, #f17c75, #f5736d, #f86966, #fb5f5f);
+  width: 13%;
+}
+
+.notes-title .add-note-btn:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.notes-title .add-note-btn:active {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.notes-content {
+  position: relative;
+  z-index: 20;
+}
+
+.note-modal {
+  width: 80px;
+  height: 80px;
+  -webkit-transform: rotate(335deg);
+          transform: rotate(335deg);
+  position: absolute;
+  z-index: 5;
+  left: 12px;
+  bottom: 91px;
+}
+
+.note-btn-div {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.note-input {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  outline: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #e8e8e8, transparent);
+  border: none;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#debf2d), color-stop(#e0ba3a), color-stop(#e1b546), color-stop(#e1b150), color-stop(#e0ad5a), color-stop(#dfa85a), color-stop(#dea35b), color-stop(#dc9e5b), color-stop(#dd9553), color-stop(#dd8c4c), color-stop(#de8247), to(#de7842));
+  background-image: linear-gradient(to right top, #debf2d, #e0ba3a, #e1b546, #e1b150, #e0ad5a, #dfa85a, #dea35b, #dc9e5b, #dd9553, #dd8c4c, #de8247, #de7842);
+  height: 100%;
+  text-align: start;
+  text-indent: 11px;
+  padding: 33px 10px 10px 10px;
+  margin-bottom: 0;
+  font-size: 17px;
+  border-radius: 0;
+}
+
+.note-input::-webkit-input-placeholder {
+  color: #545353;
+  font-size: 20px;
+}
+
+.note-input:-ms-input-placeholder {
+  color: #545353;
+  font-size: 20px;
+}
+
+.note-input::-ms-input-placeholder {
+  color: #545353;
+  font-size: 20px;
+}
+
+.note-input::placeholder {
+  color: #545353;
+  font-size: 20px;
+}
+
+.modal-text h2 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.modal-text p {
+  font-size: 12px;
+}
+
+.modal-add-note-btn {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#ff67c4), color-stop(#ff68b3), color-stop(#ff6aa4), color-stop(#ff6f96), color-stop(#ff748a), color-stop(#ff817f), color-stop(#ff8e77), color-stop(#ff9c72), color-stop(#ffb572), color-stop(#ffce79), color-stop(#fbe788), to(#f2ff9f));
+  background-image: linear-gradient(to right top, #ff67c4, #ff68b3, #ff6aa4, #ff6f96, #ff748a, #ff817f, #ff8e77, #ff9c72, #ffb572, #ffce79, #fbe788, #f2ff9f);
+  width: 80%;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#de532d), color-stop(#e25e3a), color-stop(#e66946), color-stop(#e97352), color-stop(#ec7d5e), color-stop(#f18a63), color-stop(#f59768), color-stop(#f9a46f), color-stop(#fdb973), color-stop(#ffcd7b), color-stop(#fee287), to(#fbf797));
+  background-image: linear-gradient(to right top, #de532d, #e25e3a, #e66946, #e97352, #ec7d5e, #f18a63, #f59768, #f9a46f, #fdb973, #ffcd7b, #fee287, #fbf797);
+  font-weight: bold;
+  width: 60%;
+}
+
+.modal-add-note-btn:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.modal-add-note-btn:active {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.note-form {
+  position: relative;
+}
+
+.x-modal-btn {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+}
+
+.x-modal-btn button {
+  border: none;
+  background: none;
+  font-size: 26px;
+  color: #0000009c;
+  cursor: pointer;
+  outline: none;
+}
+
+.x-modal-btn button:hover {
+  color: #cfcccc;
+}
+
+.note-ui {
+  width: 100%;
+  height: 100%;
+}
+
+.note-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  width: 70%;
+  margin: auto;
+  margin-top: 70px;
+}
+
+.note-card {
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#f6b010), color-stop(#f6b926), color-stop(#f7c237), color-stop(#f7cb46), color-stop(#f8d454), color-stop(#f7d454), color-stop(#f7d454), color-stop(#f6d454), color-stop(#f4cc46), color-stop(#f2c437), color-stop(#f0bb25), to(#eeb30c));
+  background-image: linear-gradient(to left bottom, #f6b010, #f6b926, #f7c237, #f7cb46, #f8d454, #f7d454, #f7d454, #f6d454, #f4cc46, #f2c437, #f0bb25, #eeb30c);
+  min-height: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+  border-radius: 0px 50px 0px 50px;
+  overflow-wrap: break-word;
+}
+
+.note-card p {
+  font-size: 22px;
+  padding: 20px 10px 42px 10px;
+}
+
+.note-card img {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -3px;
+  right: 9px;
+}
+
+.note-card .note-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+}
+
+.note-card .note-date p {
+  padding: 10px 10px 10px 3px;
+  font-size: 11px;
+  font-family: 'Audiowide', cursive;
+}
+
+.note-card .note-date .fa-clock {
+  font-size: 11px;
+}
+
+.note-card .fa-trash-alt {
+  position: absolute;
+  bottom: 16px;
+  left: 23px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #961000;
+}
+
+.note-delete-text {
+  padding: 20px;
+}
+
+.note-delete-div {
+  padding: 20px;
+}
+
+.empty-notes-content {
+  text-align: center;
+  line-height: 3;
+}
+
+.empty-notes-content h2:nth-child(1) {
+  color: white;
+  font-weight: 100;
+}
+
+.empty-notes-content h2:nth-child(2) {
+  display: inline-block;
+  font-family: 'Covered By Your Grace', cursive;
+  font-size: 40px;
+  color: #9c27b0ab;
+  font-weight: 100;
+}
+
+.empty-notes-content span {
+  font-family: 'Covered By Your Grace', cursive;
+  font-size: 40px;
+  color: #3a3939;
+  background: -webkit-linear-gradient(#a9a9a9, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.empty-notes-content .app-title-empty {
+  -webkit-transform: rotate(-8deg);
+          transform: rotate(-8deg);
+}
+
+.empty-notes-content .empty-notes-p {
+  margin-top: 125px;
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
+  font-weight: bold;
+  color: #000000ba;
+}
+
+.fa-plus-circle {
+  font-size: 44px;
+  margin-top: 22px;
+  cursor: pointer;
+}
+
+@media (min-width: 320px) and (max-width: 550px) {
+  .note-card p {
+    font-size: 14px;
+  }
+  .my-modal {
+    width: 350px;
+  }
+  .note-input {
+    font-size: 14px;
+  }
+  .note-input::-webkit-input-placeholder {
+    font-size: 14px;
+  }
+  .note-input:-ms-input-placeholder {
+    font-size: 14px;
+  }
+  .note-input::-ms-input-placeholder {
+    font-size: 14px;
+  }
+  .note-input::placeholder {
+    font-size: 14px;
+  }
+  .note-modal {
+    width: 50px;
+    height: 50px;
+  }
+  .modal-add-note-btn {
+    font-size: 12px;
+    width: 40%;
+  }
+  .note-card img {
+    width: 30px;
+    height: 30px;
+    top: 0px;
+    right: 16px;
+  }
+}
+
+@-webkit-keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+@keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+.hvr-pop {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.hvr-pop:hover, .hvr-pop:focus, .hvr-pop:active {
+  -webkit-animation-name: hvr-pop;
+  animation-name: hvr-pop;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+.hvr-grow-rotate {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.hvr-grow-rotate:hover, .hvr-grow-rotate:focus, .hvr-grow-rotate:active {
+  -webkit-transform: scale(1.1) rotate(4deg);
+  transform: scale(1.1) rotate(4deg);
 }
 /*# sourceMappingURL=styles.css.map */

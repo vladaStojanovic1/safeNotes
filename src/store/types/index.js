@@ -15,3 +15,7 @@ export const DELETE_USER_START = 'DELETE_USER_START';
 export const DELETE_USER_FAIL = 'DELETE_USER_FAIL';
 
 export const CLEAN_UP = 'CLEAN_UP';
+
+export const ADD_NOTE_START = 'ADD_NOTE_START';
+export const ADD_NOTE_SUCCESS = 'ADD_NOTE_SUCCESS';
+export const ADD_NOTE_FAIL = 'ADD_NOTE_FAIL';

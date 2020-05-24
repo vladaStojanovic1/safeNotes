@@ -54,3 +54,9 @@ export const ProfileSchema = Yup.object().shape({
                 .required()
         }),
 })
+
+export const NotesSchema = Yup.object().shape({
+    note: Yup.string()
+        .required('The todo is required')
+        .min(4, 'To short.')
+})
