@@ -1,0 +1,125 @@
+.signup-content{
+    background-image: url('../images/cover.jpg');
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-container{
+    background:white;
+    opacity: 0.9;
+    width: 400px;
+    height: 500px;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 1fr 3fr 1fr;
+    border-radius: 100px 100px 0px 0px;
+    text-align: center;
+}
+
+.title-register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 18px;
+    margin-bottom: 20px;
+    p{
+        color: $silver-light;
+    }
+    img{
+        width: 230px;
+    }
+}
+
+.register-form{
+    width: 100%;
+    display: grid;
+    align-items: center;
+    margin-top: 50px;
+}
+.first-last-name{
+    display: flex;
+    justify-content: center;
+}
+
+.firstName{
+    @include myInput(80%);
+}
+.lastName{
+    @include myInput(80%);
+}
+.email-register{
+    @include myInput(86%);
+}
+.password-register{
+    @include myInput(86%);
+}
+.confirm-password{
+    @include myInput(86%);
+}
+
+.fa-user{
+    @include iconInput();
+    padding: 6px 2px 2px 15px;
+    color: $silver-lighter;
+}
+
+.checkIcon-name{
+    @include checkIcon(25px);
+}
+.checkIcon-rest{
+    @include checkIcon(34px);
+}
+.register-btn{
+    @include myBtn();
+    @include btnEffect();
+    width: 86%;
+    background-image: linear-gradient(to right top, #a1ff78, #91f977, #80f276, #6fec75, #5ce575, #58e578, #55e57b, #51e57e, #5eeb85, #6af28c, #75f894, #80ff9b);
+    &:disabled{
+        cursor: not-allowed;
+    }   
+}
+
+.back-to-login{
+    display: flex;
+    align-items: center;
+    p{
+        color: $silver-light;
+    }
+    a{
+        font-weight: bold;
+        color: #4caf50a6;
+        &:active{
+            color: #4caf50a6;
+        }
+    }
+}
+
+.btn-reg{
+    margin-top: 36px;
+}
+
+.fa-lock{
+    font-size: 21px;
+    color: #129217a6;
+}
+
+
+@media (min-width: 320px) and (max-width: 550px){
+    .register-container{
+        width: 350px;
+    }
+    .back-to-login{
+        p{
+            font-size: 14px;
+        }
+    }
+    .title-register{
+        p{
+            font-size: 14px;
+        }
+    }
+}

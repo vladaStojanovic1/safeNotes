@@ -1,0 +1,483 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Comfortaa', cursive;
+}
+
+.app-title {
+  font-family: 'Covered By Your Grace', cursive;
+  font-weight: 100;
+  color: #9c27b0ab;
+  font-size: 30px;
+}
+
+.login-content {
+  background-image: url("../images/cover.jpg");
+  height: 100vh;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-container {
+  background: white;
+  opacity: 0.9;
+  width: 400px;
+  height: 520px;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -ms-grid-rows: 1fr 2fr 1fr;
+      grid-template-rows: 1fr 2fr 1fr;
+  border-radius: 80px 0px 80px 0px;
+}
+
+.login-container img {
+  width: 230px;
+}
+
+.input-group {
+  position: relative;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.iconEmail {
+  position: absolute;
+  padding: 8px 8px 5px 15px;
+  color: #bbbbbb;
+}
+
+.iconPassword {
+  position: absolute;
+  padding: 8px 8px 5px 15px;
+  color: #bbbbbb;
+}
+
+.checkIcon {
+  position: absolute;
+  right: 50px;
+  top: 10px;
+  color: #47fc4d;
+  font-size: 13px;
+}
+
+.email-input {
+  width: 80%;
+  height: 30px;
+  text-align: center;
+  outline: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #e8e8e8, transparent);
+  border: none;
+  border: none;
+}
+
+.password-input {
+  width: 80%;
+  height: 30px;
+  text-align: center;
+  outline: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #e8e8e8, transparent);
+  border: none;
+  border: none;
+}
+
+::-webkit-input-placeholder {
+  color: #bbbbbb;
+  font-size: 12px;
+}
+
+:-ms-input-placeholder {
+  color: #bbbbbb;
+  font-size: 12px;
+}
+
+::-ms-input-placeholder {
+  color: #bbbbbb;
+  font-size: 12px;
+}
+
+::placeholder {
+  color: #bbbbbb;
+  font-size: 12px;
+}
+
+.login-btn {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#ff67c4), color-stop(#ff68b3), color-stop(#ff6aa4), color-stop(#ff6f96), color-stop(#ff748a), color-stop(#ff817f), color-stop(#ff8e77), color-stop(#ff9c72), color-stop(#ffb572), color-stop(#ffce79), color-stop(#fbe788), to(#f2ff9f));
+  background-image: linear-gradient(to right top, #ff67c4, #ff68b3, #ff6aa4, #ff6f96, #ff748a, #ff817f, #ff8e77, #ff9c72, #ffb572, #ffce79, #fbe788, #f2ff9f);
+  width: 80%;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.login-btn:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.login-btn:active {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.login-btn:disabled {
+  cursor: not-allowed;
+}
+
+.logo {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  margin-top: 10px;
+}
+
+.logo h2 {
+  color: #757474;
+  letter-spacing: 3px;
+  font-size: 25px;
+  font-family: 'Luckiest Guy', cursive;
+}
+
+.login-form {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.login-form .input-group:nth-child(2) {
+  margin-bottom: 30px;
+}
+
+.register {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+
+.register h3 {
+  color: #757474;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.register h3 .app-title {
+  font-size: 25px;
+}
+
+.register .btn-register {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  padding: 10px;
+  border-radius: 30px;
+  background: white;
+  border: 1px solid lightcoral;
+  line-height: normal;
+  text-decoration: none;
+  color: #757474;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.register .btn-register:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.register .btn-register:active {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.my-logo-text {
+  -webkit-transform: rotate(-14deg);
+          transform: rotate(-14deg);
+  margin-top: 20px;
+  text-align: center;
+}
+
+.my-logo-text h2 {
+  font-size: 21;
+}
+
+.my-logo-text span {
+  font-size: 40px;
+}
+
+.my-logo-text .fa-lock {
+  font-size: 21px;
+  color: #129217a6;
+}
+
+.loggedIn-content {
+  background: url("../images/logged-img.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+@media (min-width: 320px) and (max-width: 550px) {
+  .login-container {
+    width: 350px;
+  }
+  .register h3 {
+    font-size: 12px;
+  }
+  .loggedIn-content {
+    background-attachment: fixed;
+    background-position: unset;
+  }
+}
+
+.signup-content {
+  background-image: url("../images/cover.jpg");
+  height: 100vh;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.register-container {
+  background: white;
+  opacity: 0.9;
+  width: 400px;
+  height: 500px;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -ms-grid-rows: 1fr 3fr 1fr;
+      grid-template-rows: 1fr 3fr 1fr;
+  border-radius: 100px 100px 0px 0px;
+  text-align: center;
+}
+
+.title-register {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-top: 18px;
+  margin-bottom: 20px;
+}
+
+.title-register p {
+  color: #757474;
+}
+
+.title-register img {
+  width: 230px;
+}
+
+.register-form {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+}
+
+.first-last-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.firstName {
+  width: 80%;
+  height: 30px;
+  text-align: center;
+  outline: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #e8e8e8, transparent);
+  border: none;
+}
+
+.lastName {
+  width: 80%;
+  height: 30px;
+  text-align: center;
+  outline: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #e8e8e8, transparent);
+  border: none;
+}
+
+.email-register {
+  width: 86%;
+  height: 30px;
+  text-align: center;
+  outline: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #e8e8e8, transparent);
+  border: none;
+}
+
+.password-register {
+  width: 86%;
+  height: 30px;
+  text-align: center;
+  outline: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #e8e8e8, transparent);
+  border: none;
+}
+
+.confirm-password {
+  width: 86%;
+  height: 30px;
+  text-align: center;
+  outline: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #e8e8e8, transparent);
+  border: none;
+}
+
+.fa-user {
+  position: absolute;
+  padding: 8px 8px 5px 15px;
+  padding: 6px 2px 2px 15px;
+  color: #bbbbbb;
+}
+
+.checkIcon-name {
+  position: absolute;
+  right: 25px;
+  top: 10px;
+  color: #47fc4d;
+  font-size: 13px;
+}
+
+.checkIcon-rest {
+  position: absolute;
+  right: 34px;
+  top: 10px;
+  color: #47fc4d;
+  font-size: 13px;
+}
+
+.register-btn {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#ff67c4), color-stop(#ff68b3), color-stop(#ff6aa4), color-stop(#ff6f96), color-stop(#ff748a), color-stop(#ff817f), color-stop(#ff8e77), color-stop(#ff9c72), color-stop(#ffb572), color-stop(#ffce79), color-stop(#fbe788), to(#f2ff9f));
+  background-image: linear-gradient(to right top, #ff67c4, #ff68b3, #ff6aa4, #ff6f96, #ff748a, #ff817f, #ff8e77, #ff9c72, #ffb572, #ffce79, #fbe788, #f2ff9f);
+  width: 80%;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 86%;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#a1ff78), color-stop(#91f977), color-stop(#80f276), color-stop(#6fec75), color-stop(#5ce575), color-stop(#58e578), color-stop(#55e57b), color-stop(#51e57e), color-stop(#5eeb85), color-stop(#6af28c), color-stop(#75f894), to(#80ff9b));
+  background-image: linear-gradient(to right top, #a1ff78, #91f977, #80f276, #6fec75, #5ce575, #58e578, #55e57b, #51e57e, #5eeb85, #6af28c, #75f894, #80ff9b);
+}
+
+.register-btn:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.register-btn:active {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.register-btn:disabled {
+  cursor: not-allowed;
+}
+
+.back-to-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.back-to-login p {
+  color: #757474;
+}
+
+.back-to-login a {
+  font-weight: bold;
+  color: #4caf50a6;
+}
+
+.back-to-login a:active {
+  color: #4caf50a6;
+}
+
+.btn-reg {
+  margin-top: 36px;
+}
+
+.fa-lock {
+  font-size: 21px;
+  color: #129217a6;
+}
+
+@media (min-width: 320px) and (max-width: 550px) {
+  .register-container {
+    width: 350px;
+  }
+  .back-to-login p {
+    font-size: 14px;
+  }
+  .title-register p {
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

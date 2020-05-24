@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+  
+.login-content{
+    background-image: url('../images/cover.jpg');
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container{
+    background:white;
+    opacity: 0.9;
+    width: 400px;
+    height: 520px;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 1fr 2fr 1fr;
+    border-radius: 80px 0px 80px 0px;
+    img{
+        width: 230px;
+    }
+}
+
+
+
+.input-group{
+   position: relative;
+   text-align: center;
+   margin-bottom: 15px;
+}
+
+.iconEmail{
+    @include iconInput();
+    color: $silver-lighter;
+}
+.iconPassword{
+    @include iconInput();
+    color: $silver-lighter;
+}
+.checkIcon{
+    @include checkIcon(50px);
+}
+.email-input{
+    @include myInput(80%);
+    border: none;
+
+}
+.password-input{
+    @include myInput(80%);
+    border: none;
+}
+
+::placeholder{
+    color: $silver-lighter;
+    font-size: 12px;
+}
+
+.login-btn{
+   @include myBtn();
+   @include btnEffect();
+   &:disabled{
+       cursor: not-allowed;
+   }
+}
+
+.logo{
+    display: grid;
+    justify-items: center;
+    margin-top: 10px;
+    h2{
+        color:$silver-light;
+        letter-spacing: 3px;
+        font-size: 25px;
+        font-family: 'Luckiest Guy', cursive;
+    }
+}
+
+.login-form{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+
+    .input-group:nth-child(2){
+        margin-bottom: 30px;
+    }
+}
+
+.register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: 20px;
+
+    h3{
+        color: $silver-light;
+        margin-bottom: 10px;
+        font-size: 14px;
+
+        .app-title{
+            font-size: 25px;
+        }
+    }
+    
+    .btn-register{
+        @include btnEffect();
+        padding: 10px;
+        border-radius: 30px;
+        background: white;
+        border: 1px solid lightcoral;
+        line-height: normal;
+        text-decoration: none;
+        color: $silver-light;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+}
+
+
+.my-logo-text{
+    transform: rotate(-14deg);
+    margin-top: 20px;
+    text-align: center;
+
+    h2{
+        font-size: 21;
+    }
+    span{
+        font-size: 40px;
+    }
+
+    .fa-lock{
+        font-size: 21px;
+        color: #129217a6;
+    }
+}
+
+
+
+
+
+.loggedIn-content{
+    background: url('../images/logged-img.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+
+@media (min-width: 320px) and (max-width: 550px){
+    .login-container{
+        width: 350px;
+    }
+    .register{
+        h3{
+            font-size: 12px;
+        }
+    }
+
+    .loggedIn-content{
+        background-attachment: fixed;
+        background-position: unset;
+    }
+}

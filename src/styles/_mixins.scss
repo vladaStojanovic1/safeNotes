@@ -1,0 +1,63 @@
+@mixin iconInput {
+    position: absolute;
+    padding: 8px 8px 5px 15px;
+}
+
+@mixin myInput($inputWidth) {
+    width: $inputWidth;
+    height: 30px;
+    text-align: center;
+    outline: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #e8e8e8, transparent);
+    border: none;
+}
+
+@mixin myBtn {
+    background-image: linear-gradient(to right top, #ff67c4, #ff68b3, #ff6aa4, #ff6f96, #ff748a, #ff817f, #ff8e77, #ff9c72, #ffb572, #ffce79, #fbe788, #f2ff9f);
+    width: 80%;
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+@mixin btnEffect {
+    transition: all 0.5s;
+    &:hover{
+        transform: translateY(-3px);
+    }
+    &:active{
+        transform:translateY(3px);
+    }
+}
+
+@mixin checkIcon($right) {
+    position: absolute;
+    right: $right;
+    top: 10px;
+    color: #47fc4d;
+    font-size: 13px;
+}
+
+@mixin myLink {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+
+@mixin myModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transition: all 0.3s;
+    width: 400px;
+    z-index: 1500;
+    text-align: center;
+    border-radius: 10px;
+    background-image: radial-gradient(circle, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #f5f5f6, #ebebed, #e1e1e4, #cacbd1, #b4b6be, #9da2ab, #868e99);
+}

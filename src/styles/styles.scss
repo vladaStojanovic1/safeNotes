@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+}
+  
+.app-title{
+  font-family: 'Covered By Your Grace', cursive;
+  font-weight: 100;
+  color: #9c27b0ab;
+  font-size: 30px;
+}
+
+@import '../styles/variables';  
+@import '../styles/mixins';  
+@import '../Auth/Login/login';
+@import '../Auth/SignUp/signup';
